@@ -8,21 +8,23 @@ Finish this hangman game
     - how many guesses left?
 
 - in the render method, add a button which add a guess
-  (eg <button onClick={???}>A</button>)
+  (eg `<button onClick={???}>A</button>`)
 
 - move this button into a renderInputButton(letter) {} method
 
+```
   class App ... {
     ...
     renderInputButton(letter) {
       return <button onClick=...>{letter}</button>
     } 
   }
-
+```
 
 - in the map render() function, render a button for every
   letter of the alphabet:
 
+```
   class App ... {
     ...
     render() {
@@ -31,6 +33,7 @@ Finish this hangman game
       ...
     }
   }
+```
 
 - when you have won, display a congratulatory message
 
