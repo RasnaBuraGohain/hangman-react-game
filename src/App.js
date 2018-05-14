@@ -28,29 +28,46 @@ class App extends PureComponent {
       guesses
     } = this.state
 
-    return (
-      <div>
-        <div>
-          {/* This is how we render the hanging man */}
-          {word}
-          <Hangman progress={progress} />
-        </div>
-        <div>
-          <input type='text' value={renderWord(word, guesses)} />
-        </div>
-        <div>
-          {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
-        </div>
-        {guesses}
-        <div>
-          <button onClick={() => this.setState({ word, guesses })}>
-            Done
+    if (done(word, guesses)) {
+      return (
+        <main>
+          <h>You Won!</h>
+          <div>
+            <button onClick={(done) => this.setState({
+              progress: 0,
+              word: randomWord(),
+              guesses: ['r', 'a', 's', 'n', 'i']
+            })}>
+              Done
           </button>
-        </div>
-        <button onClick={() => this.setState({ progress: progress + 1 })}>
-          Hang The Man !
+          </div>
+        </main>
+      )
+    }
+
+
+
+    return (
+      <main>
+        <h1>Hangman Game</h1>
+        <div>
+          <div>
+            {/* This is how we render the hanging man */}
+            {word}
+            <Hangman progress={progress} />
+          </div>
+          <div>
+            <input type='text' value={renderWord(word, guesses)} />
+          </div>
+          <div>
+            {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
+          </div>
+
+          <button onClick={() => this.setState({ progress: progress + 1 })}>
+            Hang The Man !
         </button>
-      </div>
+        </div>
+      </main>
     )
   }
   renderInputButton(letter) {
