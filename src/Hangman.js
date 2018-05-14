@@ -44,7 +44,7 @@ class Hangman extends PureComponent {
             YOU DIED !
           </text>
           <text x="0" y="180" fill="red" stroke="black" style={{ fontSize: '50px', color: 'red' }}>
-            VERY SAD !!
+            HA HA HA !!
           </text>
         </g>
       </svg>

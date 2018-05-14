@@ -1,0 +1,22 @@
+body {
+  margin-top: 50px;
+ }
+ 
+ main {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #AAA;
+  color: #333;
+  padding: 20px;
+  background-color: #EEE;
+ }
+ 
+ .word {
+  font-kerning: 10px;
+  font-size: 40px;
+  padding: 10px;
+  background-color: #DDD;
+  width: 50%;
+  margin: 1em auto;
+ }

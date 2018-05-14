@@ -43,7 +43,7 @@ class App extends PureComponent {
         </div>
         {guesses}
         <div>
-          <button onClick={() => this.setState({ word, guesses })}>
+          <button onClick={(done) => this.setState({ word, guesses })}>
             Done
           </button>
         </div>
@@ -58,14 +58,14 @@ class App extends PureComponent {
       progress,
       guesses,
       word,
-
+      done,
     } = this.state
 
     return (
       <button onClick={() => this.setState({
         guesses: [letter, ...guesses],
         progress: word.indexOf(letter) > -1 ? progress : progress + 1,
-
+        done: ''
       })}>
         {letter}
 
