@@ -64,7 +64,6 @@ class App extends PureComponent {
           <div className="alphabets">
             {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
           </div>
-
           <button onClick={() => this.setState({ progress: progress + 1 })}>
             Hang The Man !
         </button>
@@ -84,13 +83,9 @@ class App extends PureComponent {
       <button onClick={() => this.setState({
         guesses: [letter, ...guesses],
         progress: word.indexOf(letter) > -1 ? progress : progress + 1,
-
       })}>
         {letter}
-
-
       </button>
-
     )
   }
 }
