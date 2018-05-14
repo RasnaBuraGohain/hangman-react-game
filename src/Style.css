@@ -9,14 +9,24 @@ body {
   border: 1px solid #AAA;
   color: #333;
   padding: 20px;
-  background-color: rgb(153, 202, 153);
+  background-color: rgba(86, 168, 235, 0.548);
  }
  
  .word {
   font-kerning: 10px;
   font-size: 40px;
   padding: 10px;
-  background-color: #DDD;
+  background-color: rgba(239, 248, 115, 0.527);
   width: 50%;
   margin: 1em auto;
+ }
+ .alphabets {
+  margin: 20px;
+ }
+ .donebutton{
+   height: 50px;
+   font-size: 30px;
+   color: white;
+   background-color: black;
+
  }

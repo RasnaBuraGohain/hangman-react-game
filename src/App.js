@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Hangman from './Hangman';
 import { done, randomWord, renderWord } from './words';
 import Style from './Style.css';
+import Image from './Image.gif'
 
 // This shows you how to use the functions in words.js:
 /*
@@ -31,14 +32,15 @@ class App extends PureComponent {
     if (done(word, guesses)) {
       return (
         <main>
-          <h>You Won!</h>
+          <h1>You Won!</h1>
+          <div><img src={Image} /></div>
           <div>
-            <button onClick={(done) => this.setState({
+            <button className="donebutton" onClick={(done) => this.setState({
               progress: 0,
               word: randomWord(),
               guesses: ['r', 'a', 's', 'n', 'i']
             })}>
-              Done
+              DONE
           </button>
           </div>
         </main>
@@ -51,15 +53,15 @@ class App extends PureComponent {
       <main>
         <h1>Hangman Game</h1>
         <div>
-          <div>
+          <div className="word">{word}
             {/* This is how we render the hanging man */}
-            {word}
+
             <Hangman progress={progress} />
           </div>
           <div>
             <input type='text' value={renderWord(word, guesses)} />
           </div>
-          <div>
+          <div className="alphabets">
             {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
           </div>
 
@@ -85,6 +87,7 @@ class App extends PureComponent {
 
       })}>
         {letter}
+
 
       </button>
 
