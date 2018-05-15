@@ -18,7 +18,7 @@ class App extends PureComponent {
     this.state = {
       progress: 0,
       word: randomWord(),
-      guesses: ['r', 'a', 's', 'n', 'i']
+      guesses: []
     }
   }
 
@@ -34,12 +34,12 @@ class App extends PureComponent {
       return (
         <main>
           <h1>You Won!</h1>
-          <div><img src={Image} alt="Jim Carrey Dancing" /></div>
+          <div><img src={Image} title="Jim" alt="Jim Carrey Dancing" /></div>
           <div>
             <button className="donebutton" onClick={(done) => this.setState({
               progress: 0,
               word: randomWord(),
-              guesses: ['e', 'a', 'o', 'u', 'i']
+              guesses: [],
             })}>
               DONE
           </button>
@@ -57,7 +57,7 @@ class App extends PureComponent {
       <main>
         <h1>Hangman Game</h1>
         <div>
-          <div className="word">{word}
+          <div className="word">
             {/* This is how we render the hanging man */}
 
             <Hangman progress={progress} />
@@ -68,9 +68,6 @@ class App extends PureComponent {
           <div className="alphabets">
             {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
           </div>
-          <button onClick={() => this.setState({ progress: progress + 1 })}>
-            Hang The Man !
-        </button>
         </div>
         <div>
           <Footer />
