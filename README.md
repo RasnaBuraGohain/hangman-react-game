@@ -1,4 +1,4 @@
- You can run this code in your browser via CodeSandbox.
+ You can run this code in your browser via (https://codesandbox.io/s/github/RasnaBuraGohain/hangman-react-game).
 
 Finish this hangman game
 
