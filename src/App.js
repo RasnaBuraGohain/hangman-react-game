@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import Hangman from './Hangman';
 import { done, randomWord, renderWord } from './words';
-import Style from './Style.css';
+import './Style.css';
 import Image from './Image.gif';
 import Footer from './Footer.js';
 
@@ -34,12 +34,12 @@ class App extends PureComponent {
       return (
         <main>
           <h1>You Won!</h1>
-          <div><img src={Image} /></div>
+          <div><img src={Image} alt="Jim Carrey Dancing" /></div>
           <div>
             <button className="donebutton" onClick={(done) => this.setState({
               progress: 0,
               word: randomWord(),
-              guesses: ['r', 'a', 's', 'n', 'i']
+              guesses: ['e', 'a', 'o', 'u', 'i']
             })}>
               DONE
           </button>

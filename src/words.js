@@ -4,7 +4,7 @@ import words from './longwords.json'
 
 export const randomWord = () => {
   const idx = Math.floor(Math.random() * words.length)
-  return words[idx]
+  return words[idx].toLowerCase()
 }
 
 export const renderWord = (word, guesses) => {
