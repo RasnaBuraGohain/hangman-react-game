@@ -28,5 +28,8 @@ body {
    font-size: 30px;
    color: white;
    background-color: black;
-
+ }
+ #footer {
+  text-align: right;
+  margin: 1em auto;
  }

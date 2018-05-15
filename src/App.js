@@ -3,6 +3,7 @@ import Hangman from './Hangman';
 import { done, randomWord, renderWord } from './words';
 import Style from './Style.css';
 import Image from './Image.gif'
+import Footer from './Footer.js'
 
 // This shows you how to use the functions in words.js:
 /*
@@ -43,6 +44,9 @@ class App extends PureComponent {
               DONE
           </button>
           </div>
+          <div>
+            <Footer />
+          </div>
         </main>
       )
     }
@@ -68,6 +72,9 @@ class App extends PureComponent {
             Hang The Man !
         </button>
         </div>
+        <div>
+          <Footer />
+        </div>
       </main>
     )
   }
@@ -88,6 +95,7 @@ class App extends PureComponent {
       </button>
     )
   }
+
 }
 
 export default App;
