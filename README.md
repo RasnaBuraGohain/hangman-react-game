@@ -1,3 +1,5 @@
+ You can run this code in your browser via CodeSandbox.
+
 Finish this hangman game
 
 
