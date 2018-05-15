@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import Hangman from './Hangman';
 import { done, randomWord, renderWord } from './words';
 import Style from './Style.css';
-import Image from './Image.gif'
-import Footer from './Footer.js'
+import Image from './Image.gif';
+import Footer from './Footer.js';
 
 // This shows you how to use the functions in words.js:
 /*
