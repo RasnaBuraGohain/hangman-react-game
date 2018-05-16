@@ -48,6 +48,7 @@ class Hangman extends PureComponent {
           </text>
         </g>
       </svg>
+
     )
   }
 }

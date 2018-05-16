@@ -41,7 +41,7 @@ class App extends PureComponent {
               word: randomWord(),
               guesses: [],
             })}>
-              DONE
+              LET'S PLAY AGAIN
           </button>
           </div>
           <div>
@@ -51,17 +51,15 @@ class App extends PureComponent {
       )
     }
 
-
-
     return (
       <main>
         <h1>Hangman Game</h1>
         <div>
           <div className="word">
             {/* This is how we render the hanging man */}
-
             <Hangman progress={progress} />
           </div>
+
           <div>
             <input type='text' value={renderWord(word, guesses)} />
           </div>
